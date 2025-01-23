@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube 视频下载器</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube 视频下载器</h1>
+        <div class="input-group">
+            <input type="text" id="videoUrl" placeholder="输入 YouTube 视频链接">
+            <button onclick="getVideoInfo()">获取视频信息</button>
+        </div>
+
+        <div id="videoInfo" style="display: none;">
+            <h2 id="videoTitle"></h2>
+            <select id="qualitySelect">
+                <option value="">选择视频质量</option>
+            </select>
+            <button onclick="downloadVideo()">下载视频</button>
+        </div>
+
+        <div id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <div id="progressText">准备下载...</div>
+        </div>
+
+        <div id="downloadHistory">
+            <h2>下载历史</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
